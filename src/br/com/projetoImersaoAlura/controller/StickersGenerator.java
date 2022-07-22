@@ -31,6 +31,9 @@ public class StickersGenerator {
 		Font fonte = new Font(Font.SANS_SERIF, Font.BOLD, 64);
 		graphics.setFont(fonte);
 		
+		// Escrever algo na imagem:
+		graphics.drawString("TOPZERA!", 100, novaAltura - 100);
+		
 		// Gravar a nova imagem em um arquivo:
 		ImageIO.write(novaImagem, "png", new File(nomeArquivo));
 		
