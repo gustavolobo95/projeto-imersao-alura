@@ -34,7 +34,7 @@ public class ConexaoAPI {
 		StickersGenerator stickerGenerator = new StickersGenerator();
 		for (Map<String, String> filme : listaDeFilmes) {
 			String urlImagem = filme.get("image");
-			String titulo = filme.get("title");
+			String titulo = filme.get("title").replace(":", " -");
 			InputStream inputStream = new URL(urlImagem).openStream();
 			String nomeArquivo = titulo + ".png";
 			stickerGenerator.generateSticker(inputStream, nomeArquivo);
