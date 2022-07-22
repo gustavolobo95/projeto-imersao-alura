@@ -3,6 +3,7 @@ package br.com.projetoImersaoAlura.controller;
 import java.awt.Font;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -29,6 +30,9 @@ public class StickersGenerator {
 		// Configurar a fonte:
 		Font fonte = new Font(Font.SANS_SERIF, Font.BOLD, 64);
 		graphics.setFont(fonte);
+		
+		// Gravar a nova imagem em um arquivo:
+		ImageIO.write(novaImagem, "png", new File(nomeArquivo));
 		
 	}
 	
