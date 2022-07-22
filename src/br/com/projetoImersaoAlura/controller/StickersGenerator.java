@@ -1,5 +1,6 @@
 package br.com.projetoImersaoAlura.controller;
 
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
@@ -30,6 +31,7 @@ public class StickersGenerator {
 		// Configurar a fonte:
 		Font fonte = new Font(Font.SANS_SERIF, Font.BOLD, 64);
 		graphics.setFont(fonte);
+		graphics.setColor(Color.YELLOW);
 		
 		// Escrever algo na imagem:
 		graphics.drawString("TOPZERA!", 100, novaAltura - 100);
