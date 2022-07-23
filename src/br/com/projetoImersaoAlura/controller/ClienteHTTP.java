@@ -18,5 +18,4 @@ public class ClienteHTTP {
 		return body;
 	}
 	
-	
 }
