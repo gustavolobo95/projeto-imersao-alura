@@ -36,7 +36,7 @@ public class ConexaoAPI {
 			String urlImagem = filme.get("image");
 			String titulo = filme.get("title").replace(":", " -");
 			InputStream inputStream = new URL(urlImagem).openStream();
-			String nomeArquivo = titulo + ".png";
+			String nomeArquivo = "saida/" + titulo + ".png";
 			stickerGenerator.generateSticker(inputStream, nomeArquivo);
 			System.out.println(titulo);
 
