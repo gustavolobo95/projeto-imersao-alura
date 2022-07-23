@@ -21,13 +21,13 @@ public class ConexaoAPI {
 		
 		// Tarefa: Extrair apenas os dados importantes.
 		JsonParser parser = new JsonParser();
-		List<Map<String, String>> listaDeFilmes = parser.parse(json);
+		List<Map<String, String>> listaDeConteudos = parser.parse(json);
 
 		// Tarefa: Criar as figurinhas.
 		StickersGenerator stickerGenerator = new StickersGenerator();
-		for (Map<String, String> filme : listaDeFilmes) {
-			String urlImagem = filme.get("image");
-			String titulo = filme.get("title").replace(":", " -");
+		for (Map<String, String> conteudo : listaDeConteudos) {
+			String urlImagem = conteudo.get("image");
+			String titulo = conteudo.get("title").replace(":", " -");
 			InputStream inputStream = new URL(urlImagem).openStream();
 			String nomeArquivo = "saida/" + titulo + ".png";
 			stickerGenerator.generateSticker(inputStream, nomeArquivo);
