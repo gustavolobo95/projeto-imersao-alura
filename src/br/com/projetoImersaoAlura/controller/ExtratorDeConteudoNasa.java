@@ -6,7 +6,7 @@ import java.util.Map;
 
 import br.com.projetoImersaoAlura.model.Conteudo;
 
-public class ExtratorDeConteudoNasa {
+public class ExtratorDeConteudoNasa implements ExtratorDeConteudo {
 
 	public List<Conteudo> extrairConteudo(String json) {
 		// Tarefa: Extrair apenas os dados importantes.
